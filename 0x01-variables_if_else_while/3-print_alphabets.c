@@ -5,14 +5,14 @@
  *
  * Return: Always 0 for success
  */
+
 int main(void)
 {
 	int letter;
-	
+
 	/* Print alphabet in lowercase */
 	letter = 'a';
 	while (letter <= 'z')
-
 	{
 		putchar(letter);
 		letter++;
@@ -21,7 +21,6 @@ int main(void)
 	/* Print alphabet in uppercase */
 	letter = 'A';
 	while (letter <= 'Z')
-
 	{
 		putchar(letter);
 		letter++;
