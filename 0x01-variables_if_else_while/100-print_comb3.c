@@ -8,13 +8,19 @@
 
 int main(void)
 {
-	int digit;
+	int m;
 
-	for (digit = 48; digit < 58; digit++)
+	for (m = 48; m < 57; m++)
 	{
-		putchar(digit);
-		if (digit != 57)
+		int n;
+
+		for (n = m + 1; n < 58; n++)
 		{
+			putchar(m);
+			putchar(n);
+
+			if (m == 56 && n == 57)
+				continue;
 			putchar(44);
 			putchar(32);
 		}
