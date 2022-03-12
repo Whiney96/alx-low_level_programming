@@ -8,6 +8,7 @@
 int main(void)
 {
 	int letter;
+
 	letter = 'z';
 
 	while (letter >= 'a')
