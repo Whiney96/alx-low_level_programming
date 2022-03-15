@@ -7,6 +7,7 @@
  */
 
 void print_alphabet(void)
+/* void indicates no return expected */
 {
 	char c;
 
