@@ -21,6 +21,11 @@ void times_table(void)
 			{
 				_putchar('0');
 			}
+			else if (y < 10)
+			{
+				_putchar(' ');
+				_putchar('0' + e);
+			}
 			else
 			{
 				_putchar('0' + d);
