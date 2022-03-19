@@ -2,7 +2,8 @@
 /**
  * print_triangle - function that prints a triangle
  * @size: integral that determines the sizze of the triangle
- */void print_triangle(int size)
+ */
+void print_triangle(int size)
 {
 	int row, column, k;
 
