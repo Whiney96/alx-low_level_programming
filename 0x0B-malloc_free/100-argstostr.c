@@ -2,63 +2,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strlen - length of a string
- * @s: input char
- * Return: length of a string
+ * *argstostr -  a function that concatenates all the arguments of your program.
+ * @ac : int
+ * @av : array
+ * Return: array
  */
-int _strlen(char *s)
-{
-	int l = 0;
-
-	while (*s != '\0')
-	{
-		s++;
-		l++;
-	}
-	return (l);
-}
-
-/**
- * argstostr - concat
- * @ac: count
- * @av: vector
- * Return: string
- */
-
 char *argstostr(int ac, char **av)
 {
-	int i, j, k;
-	int len, R = 0;
-	char *p;
+	int x, y, i, j, l = 0, a = 0;
+	char *s;
 
-	if (!ac || !av)
+	if (ac == 0 || av == NULL)
+	return (NULL);
+	for (i = 0; (i < ac); i++)
 	{
-		return (NULL);
-	}
-	R = 0;
-
-	for (i = 0; i < ac; i++)
-	{
-		len = _strlen(av[i]) + 1;
-		R += len;
-	}
-	p = malloc(sizeof(char) * R + 1);
-
-	if (!p)
-	{
-		return (NULL);
+		for (j = 0; av[i][j] != '\0'; j++)
+		l++;
+		l++;
 	}
 
-	for (i = 0; i < ac; i++)
+	s = malloc(sizeof(char) * l + 1);
+	if (s == NULL)
+	return (NULL);
+	for (x = 0; x < ac ; x++)
 	{
-		len = _strlen(av[i]);
-
-		for (j = 0; j < len; j++, k++)
+		for (y = 0; av[x][y] != '\0'; y++)
 		{
-			p[k] = av[i][j];
+			s[a] = av[x][y];
+			a++;
 		}
-		p[k++] = '\n';
+		s[a++] = '\n';
 	}
-	p[k] = '\0';
-	return (p);
-}
+	s[a] = '\0';
+	return (s);
+
