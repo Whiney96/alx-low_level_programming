@@ -28,6 +28,7 @@ char **strtow(char *str)
 		}
 		i++;
 	}
+
 	if (count == 0)
 	{
 		return (NULL);
